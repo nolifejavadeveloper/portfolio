@@ -1,6 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
+
+:root {
+  --color-dark: #252525;
+  --color: #FBFBFD;
+  caret-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 body {
+  background-color: var(--color);
   position: relative; 
   height: 100%;
   margin: 0;
@@ -13,21 +27,9 @@ body {
 }
 
 body.dark {
-  background-color: black;
+  background-color: var(--color-dark);
 }
 
-
-:root {
-  --font-color: black;
-  --font-color-dark: white;
-  caret-color: transparent;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
 
 .wire {
   position: absolute;
@@ -35,7 +37,7 @@ body.dark {
   bottom: 80%;
   width: 4px;
   height: 20vh;
-  background: #000;
+  background: var(--color-dark);
   z-index: 1;
 }
 
@@ -52,7 +54,7 @@ body.dark {
 }
 
 body.dark .bulb {
-  background-color: black;
+  background-color: var(--color-dark);
 }
 
 .bulb:before {
@@ -63,7 +65,7 @@ body.dark .bulb {
   width: 35px;
   height: 80px;
   background: #444;
-  border-top: 30px solid #000;
+  border-top: 30px solid var(--color-dark);
   border-radius: 10px;
 }
 
@@ -81,7 +83,7 @@ body .bulb::after {
 }
 
 body.dark .bulb::after {
-  background-color: black;
+  background-color: var(--color-dark);
 }
 
 body .bulb {
@@ -91,7 +93,7 @@ body .bulb {
 }
 
 body.dark .bulb {
-  background-color: black;
+  background-color: var(--color-dark);
   box-shadow: none
 }
 
@@ -101,7 +103,7 @@ body .bulb::before {
 }
 
 body.dark .bulb::before {
-  background-color: black;
+  background-color: var(--color-dark);
 }
 
 
@@ -131,7 +133,6 @@ body.dark .bulb span:nth-child(2) {
   background: transparent;
   transform: rotate(342deg);
   border-bottom-right-radius: 40px;
-  box-shadow: 20px 20px 0 10px #444;
 }
 
 .bulb span:nth-child(2) {
@@ -144,11 +145,10 @@ body.dark .bulb span:nth-child(2) {
   background: transparent;
   transform: rotate(17deg);
   border-bottom-left-radius: 40px;
-  box-shadow: -20px 20px 0 10px #444;
 }
 
 .info {
-  color: var(--font-color);
+  color: var(--color-dark);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -157,7 +157,7 @@ body.dark .bulb span:nth-child(2) {
 }
 
 body.dark .info {
-  color: var(--font-color-dark);
+  color: var(--color);
 }
 
 
@@ -174,6 +174,12 @@ body.dark .info {
 .highlight {
   color: transparent;
   background-clip: text;
+  background-color: #F4D03F;
+  background-image: linear-gradient(132deg, #F4D03F 0%, #16A085 100%);
+  
+}
+
+body.dark .highlight {
   background-color: #8ec5fc;
   background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
 }
@@ -182,7 +188,7 @@ body.dark .info {
   display: inline-block;
   width: 2px;
   height: 2.5rem;
-  background-color: var(--font-color);
+  background-color: var(--color-dark);
   animation: blink 1s step-start infinite;
   margin-left: 2px;
   vertical-align: text-top;
@@ -190,7 +196,7 @@ body.dark .info {
 
 
 body.dark .caret {
-  background-color: var(--font-color-dark);
+  background-color: var(--color);
 }
 
 @keyframes blink {
@@ -205,15 +211,14 @@ body.dark .caret {
 }
 
 .socials a {
-  color: var(--font-color);
+  color: var(--color-dark);
   text-decoration: none;
   font-size: 1rem;
 }
 
 body.dark .socials a {
-  color: var(--font-color-dark);
+  color: var(--color);
 }
-
 
 .social-item {
   display: flex;
@@ -223,7 +228,7 @@ body.dark .socials a {
 }
 
 .tip {
-  color: var(--font-color);
+  color: var(--color-dark);
   position: fixed;
   bottom: 10px;
   right: 10px; 
@@ -233,8 +238,8 @@ body.dark .socials a {
 }
 
 body.dark .tip {
-  color: var(--font-color-dark)
-} 
+  color: var(--color)
+}
 
 @media only screen and (max-width: 600px) {
   .social-item span {
